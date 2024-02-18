@@ -1,10 +1,20 @@
-import Image from "next/image";
-import Landing from "@/components/Landing";
+"use client";
+import Hero from "@/components/home/Hero";
+import About from "@/components/home/About";
+import Contact from "@/components/home/Contact";
+import dynamic from "next/dynamic";
+
+const Navbar = dynamic(() => import("@/components/home/Navbar"), {
+  ssr: false,
+});
 
 export default function Home() {
-  return (
-    <>
-      <Landing/>
-    </>
+return (
+    <main>
+      <Navbar />
+      <Hero />
+      <About />
+      <Contact />
+    </main>
   );
 }

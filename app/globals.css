@@ -21,6 +21,7 @@
 
 body {
   background-color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 @layer utilities {
@@ -51,3 +52,135 @@ body {
   background-color: #1d1d1f;
 }
 
+/**************************************
+**************** Random ***************
+***************************************/
+
+/* Setting Fonts*/
+#font__poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Styling */
+#navbar__custom {
+  /*Box Shadow*/
+  font-family: "Poppins", sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  margin-bottom: 3px;
+  border-bottom: none;
+}
+
+/* Navbar: Contact */
+#navbar__contact {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 450;
+}
+
+/* Navbar Elements */
+.navbar__elements {
+  position: relative;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5;
+  padding: 0 10px;
+  margin-top: 3px;
+}
+
+.navbar__elements:after {
+  content: '';
+  position: absolute;
+  background-color: #84eeab;
+  height: 5px;
+  width: 0;
+  left: 0;
+  bottom: -26px;
+}
+
+.navbar__elements:hover:after {
+  animation: growInAnimation 0.3s ease-in-out forwards;
+}
+
+@keyframes growInAnimation {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* Hero: Right Arrow */
+.right-arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+/* Like button */
+.custom-checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  float: right;
+  margin-right: 20px;
+}
+
+.custom-checkbox-checkmark {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  transition: transform 400ms ease, fill 400ms ease;
+  transform-origin: center center;
+}
+
+.custom-checkbox-input:checked~.custom-checkbox-checkmark {
+  animation: custom-like-effect 800ms ease;
+  fill: #FF5353;
+  /* Change fill color to red */
+}
+
+.custom-checkbox:hover .custom-checkbox-checkmark {
+  transform: scale(1.1);
+}
+
+@keyframes custom-like-effect {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*
+ * Login Page Styling
+*/
+
+#login-left {
+  background-image: url('/images/login-background.jpg');
+  background-size: cover;
+}
